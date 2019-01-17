@@ -22,11 +22,11 @@ def self.create_table
 end
 
 def self.drop_table
-sql = <<-SQL 
-  DROP TABLE students;
+sql = <<-SQL
+  DROP TABLE IF EXISTS students;
 
-    SQL 
-    
+    SQL
+
 
 end
   # Remember, you can access your database connection anywhere in this class
