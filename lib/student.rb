@@ -30,7 +30,7 @@ def self.drop_table
 
 end
 
-def save(name, grade)
+def save(name, grade, id = nil)
   sql = <<-SQL
     CREATE TABLE IF NOT EXISTS students (
       id INTEGER PRIMARY KEY,
