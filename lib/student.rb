@@ -32,11 +32,7 @@ end
 
 def save(name, grade, id = nil)
   sql = <<-SQL
-    CREATE TABLE IF NOT EXISTS students (
-      id INTEGER PRIMARY KEY,
-      name TEXT,
-      grade INTEGER
-    )
+    INSERT INTO students (name, grade) VALUES (?, ?)
     SQL
     DB[:conn].execute(sql)
 
